@@ -1,0 +1,9 @@
+AddDefaultCharset utf-8
+php_flag display_startup_errors on
+php_flag display_errors on
+php_flag html_errors on
+php_flag  log_errors on
+php_value session.gc_maxlifetime 21600
+
+RewriteRule ^(.*)/(.*)/$ index.php?route=$1&sub=$2 [L]
+RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
